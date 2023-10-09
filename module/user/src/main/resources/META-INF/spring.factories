@@ -1,0 +1,7 @@
+# Run Listeners
+org.springframework.boot.SpringApplicationRunListener=\
+com.imooc.architect.module.user.config.MySpringApplicationRunListener
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+com.imooc.architect.module.user.config.MyApplicationListener

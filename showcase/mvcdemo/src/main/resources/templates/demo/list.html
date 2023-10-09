@@ -1,0 +1,7 @@
+<h3>list.th showcase</h3>
+<ul>
+    <li th:each="item,itemStat : ${list}">
+        <span th:text="${itemStat.count}">序号</span>
+        <span th:text="${item.name}">姓名</span>
+    </li>
+</ul>

@@ -1,0 +1,36 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: dev
+  main:
+    banner-mode: console
+  banner:
+    location: classpath:banner_2.txt
+    image:
+      location: classpath:banner_1.jpg
+  h2:
+    console:
+      enabled: true
+  datasource:
+    druid:
+      stat-view-servlet:
+        enabled: true
+trace: false
+debug: false
+logging:
+  pattern:
+    console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:HH:mm:ss.SSS}}){faint}%clr(${LOG_LEVEL_PATTERN:%5p}) %clr([%5.15t]){faint} %m%n"
+  group:
+    tomcat: org.apache.catalina, org.apache.coyote, org.apache.tomcat
+  level:
+    root: INFO
+    web: INFO
+    sql: INFO
+    tomcat: INFO

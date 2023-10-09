@@ -1,0 +1,25 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  h2:
+    console:
+      enabled: true
+  datasource:
+    druid:
+      check-execute-time: true
+      filter:
+        stat:
+          enabled: true
+        slf4j:
+          enabled: true
+      stat-view-servlet:
+        enabled: true
+    initialization-mode:
+    schema:
+      - classpath*:/initDb.sql
+
+logging:
+  pattern:
+    #console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:}){magenta}%clr{faint} %clr([%5.15t]){faint} %m %clr(%-40.40logger{39}){cyan}%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+    console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:HH:mm:ss.SSS}}){faint}%clr(${LOG_LEVEL_PATTERN:%5p}) %clr([%5.15t]){faint} %m%n"

@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    druid:
+      filter:
+        config:
+          enabled: true
+        slf4j:
+          enabled: true
+        stat:
+          enabled: true
+    schema:
+      - classpath:/h2/initDb.sql
+mybatis:
+  config-location: classpath:/mappers/mybatis-config.xml

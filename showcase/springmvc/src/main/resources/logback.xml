@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="30 seconds">
+<!-- 	<property name="log.dir" value="${catalina.base}/logs" /> -->
+	<property name="log.dir" value="target/logs" />
+	<property name="encoding" value="UTF-8" />
+<!--    <property name="std-pattern" value="%d{HH:mm:ss.SSS}[%thread][%-5level]%msg %logger{10}.%M:%L%n" />-->
+    <property name="std-pattern" value="[%thread][%-5level]%msg %logger{10}.%M:%L%n" />
+    <!-- 控制台输出 -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${std-pattern}</pattern>
+            <charset>${encoding}</charset>
+        </encoder>
+    </appender>
+
+
+	<logger name="druid.sql">
+		<level value="DEBUG"/>
+	</logger>
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="stdout" />
+    </root>
+
+</configuration>

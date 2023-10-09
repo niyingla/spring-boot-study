@@ -1,0 +1,15 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  output:
+    ansi:
+      enabled: always
+  h2:
+    console:
+      enabled: true
+logging:
+  pattern:
+    console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:HH:mm:ss.SSS}}){faint}%clr(${LOG_LEVEL_PATTERN:%5p}) %clr([%5.15t]){faint} %m%n"
